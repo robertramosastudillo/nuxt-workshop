@@ -1,7 +1,10 @@
 <template lang="html">
     <div class="container">
-        <a href="#">Regresar</a>
-        <h1 class="title">{{album.title}}</h1>
+        <header>
+            <nuxt-link to="/">Regresar</nuxt-link>
+            <h1 class="title">{{album.title}}</h1>
+        </header>
+
         <div class="columns is-multiline"> 
             <div class="column is-one-quarter"v-for="photo in photos" :key="photo.id">
                 <img :src="photo.url" :alt="photo.title">
@@ -40,7 +43,8 @@ export default {
 .container{
     text-align: center;
 }
-    .title{
+    header{
         margin-top: 100px;
+        margin-bottom: 100px;
     }
 </style>
